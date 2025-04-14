@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+*::selection {
+    color: #fff;
+    background-color: #000;
+}
+
+#main {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+
+body {
+    background-color: #F7F7F7;
+}
+
+#cursor {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: rgba(165, 158, 158, 0.184);
+    position: fixed;
+    transform: translate(-50%, -50%) scale(1);
+    /* z-index: 9; */
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Navigation part Start  */
+.nav {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    z-index: 99;
+    justify-content: space-between;
+}
+
+/* logo part image nav  */
+.svgPart svg {
+    display: block;
+    height: 100px;
+    margin: 9px 30px;
+}
+
+.nav .svgPart {
+    height: 100px;
+    overflow: hidden;
+}
+
+/* right nav link  part  */
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    gap: 50px;
+}
+
+.text-menu {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.right li {
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.right li:hover {
+    cursor: pointer;
+}
+
+/* right image icon part  */
+.img-menu {
+    display: flex;
+    width: 20%;
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* navigation part End  */
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0 1vw;
+    padding-top: 30vh;
+
+    /* background-image: linear-gradient(88.6deg, rgba(6, 67, 105, 1) 6.6%, rgba(255, 208, 4, 1) 100.4%); */
+}
+
+#page1 h1 {
+    font-weight: 900;
+    font-size: 17vw;
+    text-transform: uppercase;
+    line-height: 13vw;
+    letter-spacing: -8px;
+}
+
+#video-container {
+    background-color: pink;
+    height: 100vh;
+    width: 100%;
+    background-color: gray;
+    position: relative;
+    margin-top: 1vw;
+}
+
+#video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#video-container #play {
+    padding: 2.5vw 1.5vw;
+    background-color: black;
+    color: #fff;
+    font-size: 1.8vw;
+    border-radius: 50%;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    opacity: 0;
+    scale: 0;
+    /* box-shadow:inset 0px 0px 30px rgb(57, 57, 237); */
+}
+
+#page2 {
+    /* margin-top: 2vw; */
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 2vw 1vw;
+    justify-content: space-between;
+}
+
+#page2 .elem {
+    height: 100%;
+    width: 31%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page2 .elem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+#page2 .elem .dets {
+    height: 50px;
+    width: 72%;
+    position: absolute;
+    z-index: 9;
+    background-color: rgb(242, 235, 159);
+    border-radius: 30px;
+}
+
+#page3 {
+    height: 150vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-color: #F7F7F7; */
+}
+
+.child,
+.child a {
+    height: 64vh;
+    width: 48vw;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.child a:hover {
+    cursor: pointer;
+}
+
+.child a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#page4 {
+    height: 100vh;
+    width: 100%;
+    margin-top: 5vh;
+    background-image: radial-gradient(circle 710px at 5.2% 7.2%, rgba(37, 90, 222, 0.943) 0%, rgb(37, 90, 222) 7.5%, rgba(4, 4, 29, 0.767) 44.7%);
+}
+
+@media (max-width: 550px) {
+
+    /* this is navabar part  */
+    .nav .right .text-menu {
+        display: none;
+    }
+
+    .nav {
+        justify-content: space-between;
+        height: 50px;
+    }
+
+    .img-menu {
+        display: flex;
+        width: 60%;
+        margin-left: 70px;
+        border: 2px solid white;
+        border-radius: 30px;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    #page1 {
+        min-height: 50vh;
+        width: 100%;
+        padding-top: 18vh;
+    }
+
+    #page1 h1 {
+        font-weight: 900;
+        font-size: 17vw;
+        /** Text Gradient Example */
+
+        color: #eeb7d7;
+        background-image: linear-gradient(45deg, #e92497, #5a049b 50%, #a15e03 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        text-transform: uppercase;
+        /* line-height: 13vw; */
+        letter-spacing: -3px;
+    }
+
+    #video-container {
+        height: 25vh;
+        margin-top: 2vw;
+        /* margin-bottom: 2vw; */
+    }
+
+    #video-container #play {
+        padding: 20px 10px;
+        font-size: 4vw;
+        position: absolute;
+        background-image: radial-gradient(circle 710px at 5.2% 7.2%, rgba(37, 89, 222, 1) 0%, rgba(37, 89, 222, 1) 7.5%, rgba(4, 4, 29, 1) 44.7%);
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    #page2 {
+        /* margin-top: 2vw; */
+        min-height: 50vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5vw 3vw;
+        gap: 3vw;
+        justify-content: space-between;
+    }
+
+    #page2 .elem {
+        height: 70vh;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    #page2 .elem .dets {
+        height: 40px;
+        width: 80%;
+        position: absolute;
+        z-index: 9;
+        background-color: rgb(242, 235, 159);
+        border-radius: 30px;
+    }
+
+    #page3 {
+        height: auto;
+        width: 100%;
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        /* background-color: #F7F7F7; */
+    }
+
+    .child,
+    .child a {
+        height: 70vh;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
